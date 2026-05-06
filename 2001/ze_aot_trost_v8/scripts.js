@@ -23,7 +23,7 @@ Instance.OnPlayerKill(({ player }) => {
 const CONFIG = {
     tq: {tar:undefined,pos:undefined},
     STAGES: { INIT: 1, MAX_PLAYERS: 64 },
-    THINK: { DELAY: 1/10, MAX_SPEED: 1750 },
+    THINK: { DELAY: 1/64, MAX_SPEED: 1750 },
     ABILITIES: {
         LITI: { SPEED_DELAY: 30/64, MAX_SPEED_DELAY: 30, CHARGE: 0.2, MAX_NUM: 5, DEST: 3000 },
         STEAM: { SPEED: 8, CHARGE: 0.4, MAX_NUM: 5, USE_SPEED: 400 },
@@ -3663,7 +3663,7 @@ function settext(textnum, t) {
 const gameManager = new GMgr();
 
 Instance.SetThink(() => gameManager.think());
-Instance.SetNextThink(Instance.GetGameTime() + 1/10 );
+Instance.SetNextThink(Instance.GetGameTime());
 
 gameManager.pMgr.listPlayers();
 

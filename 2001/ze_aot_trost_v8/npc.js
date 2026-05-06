@@ -70,7 +70,7 @@ let tracker = {
     preparingSkillType: null,
     preparingSkillStartTime: 0,
     PREPARE_SKILL_DURATION: 0.5,
-    prepareThinkInterval: 0.1,
+    prepareThinkInterval: 0.02,
     prepareStartAngles: null,
     prepareTargetAngles: null,
     isSkillCasting: false,
