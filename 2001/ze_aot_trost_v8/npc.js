@@ -122,7 +122,7 @@ let tracker = {
     // 角度和速度
     type: 0,
     currentAngles: { pitch: 0, yaw: 0, roll: 0 },
-    thinkInterval: 0.1,
+    thinkInterval: 0.05,
 
     // 卡墙后退（仅用于转向卡死）
     isStuckTurning: false,
@@ -1046,7 +1046,7 @@ let tracker = {
         this.skillCastDuration = duration;
         this.currentSkillType = skill;
         this.npc.Teleport({ velocity: { x: 0, y: 0, z: 0 } });
-        this.thinkInterval = 0.1;
+        this.thinkInterval = 0.05;
     },
 
     endSkillCast() {
